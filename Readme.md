@@ -1,7 +1,7 @@
-# Проект «{{projectTitle}}»
+# Проект «Cinemaddict»
 
-* Студент: [{{userName}}]({{userProfile}}).
-* Наставник: `Неизвестно`.
+* Студент: [Алексей Базылев](https://up.htmlacademy.ru/javascript/30/user/2351149).
+* Наставник: `Нету`.
 
 ---
 
