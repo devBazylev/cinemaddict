@@ -1,8 +1,14 @@
 import { createElement } from '../render.js';
 
-export default class NewTaskButtonView {
+function createTemplate() {
+  return (
+    '<div class="films-list__container"></div>'
+  );
+}
+
+export default class WrapperAllView {
   getTemplate() {
-    return '<button class="control__button">+ ADD NEW TASK</button>';
+    return createTemplate();
   }
 
   getElement() {
