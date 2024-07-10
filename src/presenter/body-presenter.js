@@ -11,6 +11,10 @@ import WrapperTopView from '../view/wrapper-top-films.js';
 import WrapperMostCommentedView from '../view/wrapper-most-commented-films.js';
 import FilmCardView from '../view/film-card-view.js';
 import ButtonMoreView from '../view/button-more-view.js';
+import PopupView from '../view/popup.js';
+import PopupFormView from '../view/popup-form.js';
+import PopupTopContainerView from '../view/popup-top-container.js';
+import PopupBottomContainerView from '../view/popup-bottom-container.js';
 import { render } from '../render.js';
 
 const headerElement = document.querySelector('.header');
@@ -32,6 +36,10 @@ export default class BodyPresenter {
   wrapperTopComponent = new WrapperTopView();
   wrapperMostCommentedComponent = new WrapperMostCommentedView();
   buttonMoreComponent = new ButtonMoreView();
+  popupComponent = new PopupView();
+  popupFormComponent = new PopupFormView();
+  popupTopContainerComponent = new PopupTopContainerView();
+  popupBottomContainerComponent = new PopupBottomContainerView();
 
   filmDanceComponent = new FilmCardView('The Dance of Life', '8.3', '1929', '1h 55m', 'Musical', './images/posters/the-dance-of-life.jpg', 'Burlesque comic Ralph "Skid" Johnson (Skelly), and specialty dancer Bonny Lee King (Carroll), end up together on a cold, rainy night at a tr…', '5 comments');
   filmSagebrushComponent = new FilmCardView('Sagebrush Trail', '3.2', '1933', '54m', 'Western', './images/posters/sagebrush-trail.jpg', 'Sentenced for a murder he did not commit, John Brant escapes from prison determined to find the real killer. By chance Brant\'s narrow escap…', '89 comments');
@@ -63,5 +71,10 @@ export default class BodyPresenter {
     // render(this.filmFlamarionComponent, this.wrapperAllComponent.getElement());
     // render(this.filmEachComponent, this.wrapperAllComponent.getElement());
     render(this.buttonMoreComponent, this.sectionAllComponent.getElement());
+
+    // render(this.popupComponent, this.mainContainer);
+    render(this.popupFormComponent, this.popupComponent.getElement());
+    render(this.popupTopContainerComponent, this.popupFormComponent.getElement());
+    render(this.popupBottomContainerComponent, this.popupFormComponent.getElement());
   }
 }
