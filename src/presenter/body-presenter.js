@@ -26,20 +26,13 @@ headerPresenter.init();
 footerPresenter.init();
 
 export default class BodyPresenter {
-  mainNavComponent = new MainNavView();
-  sortComponent = new SortView();
   sectionMainComponent = new SectionMainView();
   sectionAllComponent = new SectionAllView();
   sectionTopComponent = new SectionTopView();
   sectionMostCommentedComponent = new SectionMostCommentedView();
   wrapperAllComponent = new WrapperAllView();
-  wrapperTopComponent = new WrapperTopView();
-  wrapperMostCommentedComponent = new WrapperMostCommentedView();
-  buttonMoreComponent = new ButtonMoreView();
   popupComponent = new PopupView();
   popupFormComponent = new PopupFormView();
-  popupTopContainerComponent = new PopupTopContainerView();
-  popupBottomContainerComponent = new PopupBottomContainerView();
 
   filmDanceComponent = new FilmCardView('The Dance of Life', '8.3', '1929', '1h 55m', 'Musical', './images/posters/the-dance-of-life.jpg', 'Burlesque comic Ralph "Skid" Johnson (Skelly), and specialty dancer Bonny Lee King (Carroll), end up together on a cold, rainy night at a tr…', '5 comments');
   filmSagebrushComponent = new FilmCardView('Sagebrush Trail', '3.2', '1933', '54m', 'Western', './images/posters/sagebrush-trail.jpg', 'Sentenced for a murder he did not commit, John Brant escapes from prison determined to find the real killer. By chance Brant\'s narrow escap…', '89 comments');
@@ -54,15 +47,15 @@ export default class BodyPresenter {
   }
 
   init() {
-    render(this.mainNavComponent, this.mainContainer);
-    render(this.sortComponent, this.mainContainer);
+    render(new MainNavView(), this.mainContainer);
+    render(new SortView(), this.mainContainer);
     render(this.sectionMainComponent, this.mainContainer);
     render(this.sectionAllComponent, this.sectionMainComponent.getElement());
     render(this.sectionTopComponent, this.sectionMainComponent.getElement());
     render(this.sectionMostCommentedComponent, this.sectionMainComponent.getElement());
     render(this.wrapperAllComponent, this.sectionAllComponent.getElement());
-    render(this.wrapperTopComponent, this.sectionTopComponent.getElement());
-    render(this.wrapperMostCommentedComponent, this.sectionMostCommentedComponent.getElement());
+    render(new WrapperTopView(), this.sectionTopComponent.getElement());
+    render(new WrapperMostCommentedView(), this.sectionMostCommentedComponent.getElement());
     render(this.filmDanceComponent, this.wrapperAllComponent.getElement());
     render(this.filmSagebrushComponent, this.wrapperAllComponent.getElement());
     render(this.filmGoldenComponent, this.wrapperAllComponent.getElement());
@@ -70,11 +63,11 @@ export default class BodyPresenter {
     render(this.filmPopeyeComponent, this.wrapperAllComponent.getElement());
     // render(this.filmFlamarionComponent, this.wrapperAllComponent.getElement());
     // render(this.filmEachComponent, this.wrapperAllComponent.getElement());
-    render(this.buttonMoreComponent, this.sectionAllComponent.getElement());
+    render(new ButtonMoreView(), this.sectionAllComponent.getElement());
 
     // render(this.popupComponent, this.mainContainer);
     render(this.popupFormComponent, this.popupComponent.getElement());
-    render(this.popupTopContainerComponent, this.popupFormComponent.getElement());
-    render(this.popupBottomContainerComponent, this.popupFormComponent.getElement());
+    render(new PopupTopContainerView(), this.popupFormComponent.getElement());
+    render(new PopupBottomContainerView(), this.popupFormComponent.getElement());
   }
 }
