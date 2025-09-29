@@ -5,6 +5,10 @@ import FilterModel from './model/filter-model';
 import BoardPresenter from './presenter/board-presenter';
 import FilmsApiService from './services/films-api-service';
 
+// Импортируем CSS файлы
+import '../public/css/normalize.css';
+import '../public/css/main.css';
+
 const mainContainer = document.querySelector('.main');
 
 const apiService = new FilmsApiService(END_POINT, AUTHORIZATION);

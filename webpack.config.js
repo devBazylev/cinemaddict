@@ -8,6 +8,7 @@ module.exports = {
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
+    publicPath: '/',
   },
   devtool: 'source-map',
   plugins: [
@@ -19,7 +20,7 @@ module.exports = {
         {
           from: 'public',
           globOptions: {
-            ignore: ['**/index.html'],
+            ignore: ['**/index.html', '**/*.css'],
           },
         },
       ],
@@ -40,6 +41,13 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|woff2?)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name].[hash][ext]'
+        }
       },
     ]
   }
