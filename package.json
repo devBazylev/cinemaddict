@@ -2,7 +2,7 @@
   "name": "cinemaddict",
   "version": "20.0.0",
   "private": true,
-  "description": "Проект «Киноман»",
+  "description": "Project «Cinemaddict»",
   "browserslist": [
     "last 2 versions",
     "not dead",
@@ -30,7 +30,7 @@
     "webpack-dev-server": "5.2.1"
   },
   "engines": {
-    "node": "22.14.0"
+    "node": "22.19.0"
   },
   "dependencies": {
     "camelcase-keys": "9.1.3",
