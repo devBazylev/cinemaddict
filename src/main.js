@@ -5,7 +5,6 @@ import FilterModel from './model/filter-model';
 import BoardPresenter from './presenter/board-presenter';
 import FilmsApiService from './services/films-api-service';
 
-// Импортируем CSS файлы
 import '../public/css/normalize.css';
 import '../public/css/main.css';
 
