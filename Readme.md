@@ -1,9 +1,54 @@
-1. Use the `git log --oneline` command to view the list of commits. Commits go from top to bottom from newest to oldest, it looks something like this:
+# [🎬 View Live Application (click on the link)](https://cinemaddict-ebon.vercel.app/)
 
-    ```bash
-    c0ea9d8 1.2 Create function for generating menu markup WIP
-    1a34516 1.1 Connect `src/main.js` script to `public/index.html`
-    45f1ffe :hatching_chick: initial project state
-    ```
+<div align="center">
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Webpack-5.94.0-blue?style=for-the-badge&logo=webpack" alt="Webpack" />
+  <img src="https://img.shields.io/badge/ESLint-8.38.0-purple?style=for-the-badge&logo=eslint" alt="ESLint" />
+</div>
 
-2. Checkout to the desired commit using the `git checkout commit_hash` command. For example, like this `git checkout c0ea9d8`. To return everything as it was, use the `git checkout master` command.
+## 📖 Project Overview
+
+Cinemaddict is a web application for movie enthusiasts, allowing users to browse films, add them to favorites, create watchlists, and leave comments with emotional reactions.
+
+## ✨ Key Features
+
+- **Movie Catalog** with posters, ratings, and descriptions
+- **Filtering** by categories (all, watchlist, watched, favorites)
+- **Sorting** by release date and rating
+- **Comment System** with emotional reactions
+- **Viewing Statistics** with user ranks
+- **Responsive Design** for all devices
+
+## 🛠️ Technology Stack
+
+- **Vanilla JavaScript** - Pure JS without frameworks
+- **Webpack** - Project bundling
+- **ESLint** - Code linting
+- **Day.js** - Date handling
+- **REST API** - Server interaction
+
+## 🚀 Getting Started
+
+```bash
+npm install    # Install dependencies
+npm start      # Start dev server
+npm run build  # Build for production
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── framework/     # Base classes and utilities
+├── model/         # Data models
+├── presenter/     # Presenters (MVP pattern)
+├── view/          # Views
+├── services/      # API services
+└── utils/         # Helper functions
+```
+
+---
+
+<div align="center">
+  <p>Made for movie lovers 🎭</p>
+</div>
